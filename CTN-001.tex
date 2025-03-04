@@ -58,11 +58,16 @@ This document includes figures of the LSST Camera’s focal plane layout with IT
 
 \section{Introduction}
 This document provides an overview of the LSSTCam focal plane layout.
-Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2} below illustrate the placement of science, wavefront, and guider sensors, from both ITL and e2v.  The view is looking down from above the focal plane, i.e., through the LSSTCam lenses.
+Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2} below illustrate the placement of science, wavefront, and guider sensors, from both ITL and e2v.
+The view is looking down from above the focal plane, i.e., through the LSSTCam lenses.
 
-Figure \ref{fig:focal_plane_2} also includes the serial numbers of the raft tower modules (RTM-\#\#\#), the corner raft tower modules (CRTM-\#\#\#) and the individual CCDs.  The latter are the three-digit numbers immediately below the positional designator of the CCD.  For example, R11\_S10 is E2V-CCD-354) and R20\_S10 is ITL-CCD-351.  The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}}\footnote{\url{https://github.com/lsst-camera-dh/datacat-utilities}}.
+Figure \ref{fig:focal_plane_2} also includes the serial numbers of the raft tower modules (RTM-\#\#\#), the corner raft tower modules (CRTM-\#\#\#), and the individual CCDs.
+The latter are the three-digit numbers immediately below the positional designator of the CCD.
+For example, R11\_S10 is E2V-CCD-354) and R20\_S10 is ITL-CCD-351.
+The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}}\footnote{\url{https://github.com/lsst-camera-dh/datacat-utilities}}.
 
-The set of dead segments and high-noise segments is somewhat dynamic; dead or high-noise segments sometimes revive/recover and functioning segments sometimes die or become noisy.  The set of bad segments indicated in the figures is current as of the end of Run 7 electro-optical testing.
+The set of dead segments and high-noise segments is somewhat dynamic; dead or high-noise segments sometimes revive/recover and functioning segments sometimes die or become noisy.
+The set of bad segments indicated in the figures is current as of the end of Run 7 electro-optical testing.
 
 Figure \ref{fig:focal_plane_3} shows the LSSTCam photographed in the LSST clean room, with the camera rotated 90 deg clockwise with respect to the diagrams in Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2}.
 For more comprehensive technical details on the layout of the CCDs in the focal plane, consult the reference document LCA-13381 \citep{lca13381}. 
@@ -75,10 +80,10 @@ The source code used to generate the figures is available in the GitHub reposito
   \centering
   \includegraphics[width=\textwidth]{figures/LSSTCam_focal_plane_andres_2025MAR03.pdf}
   \caption{Focal plane layout. The list of ``dead'' (readout noise $> 4\,\mathrm{e}^{-}$ or anomalous Photon Transfer Curve gain) 
-	amplifiers (segments) is \{\texttt{R30\_S00\_C10}, \texttt{R01\_S01\_C00}, \texttt{R03\_S11\_C00}, \texttt{R04\_SG0\_C11}\} 
+	amplifiers (segments) is \{\tt{R30\_S00\_C10}, \tt{R01\_S01\_C00}, \tt{R03\_S11\_C00}, \tt{R04\_SG0\_C11}\} 
 and the list of ``high-noise'' (readout noise $> 18\,\mathrm{e}^{-}$) amplifiers is 
-\{\texttt{R41\_S21\_C02}, \texttt{R43\_S20\_C14}, \texttt{R03\_S01\_C05}, \texttt{R40\_SG1\_C10}, 
-	\texttt{R44\_SG0\_C02}\}, taken from Tables~8 and 9 of SITCOMTN-148 \citep{utsumi25}. Code source: \url{https://github.com/lsst/ctn-001/code/}}
+\{\tt{R41\_S21\_C02}, \tt{R43\_S20\_C14}, \tt{R03\_S01\_C05}, \tt{R40\_SG1\_C10}, 
+	\tt{R44\_SG0\_C02}\}, taken from Tables~8 and 9 of SITCOMTN-148 \citep{utsumi25}. Code source: \url{https://github.com/lsst/ctn-001/code/}}
   \label{fig:focal_plane_1}
 \end{figure}
 
