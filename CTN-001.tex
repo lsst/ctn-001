@@ -1,8 +1,9 @@
-\documentclass[OPS,lsstdraft,authoryear,toc]{lsstdoc}
+\documentclass[OPS,authoryear,toc]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
-
+\usepackage{longtable}
+\usepackage{url}
 % Local commands go here.
 
 %If you want glossaries
@@ -65,6 +66,7 @@ Figure \ref{fig:focal_plane_2} also includes the serial numbers of the raft towe
 The latter are the three-digit numbers immediately below the positional designator of the CCD.
 For example, R11\_S10 is E2V-CCD-354) and R20\_S10 is ITL-CCD-351.
 The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}}\footnote{\url{https://github.com/lsst-camera-dh/datacat-utilities}}.
+Appendix A tabulates the mapping of raft and sensor slots to serial numbers.
 
 The set of dead segments and high-noise segments is somewhat dynamic; dead or high-noise segments sometimes revive/recover and functioning segments sometimes die or become noisy.
 The set of bad segments indicated in the figures is current as of the end of Run 7 electro-optical testing.
@@ -78,7 +80,7 @@ The source code used to generate the figures is available in the GitHub reposito
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/LSSTCam_focal_plane_andres_2025MAR03.pdf}
+  \includegraphics[width=\textwidth]{figures/LSSTCam_focal_plane_CTN_001_FIG1.pdf}
   \caption{Focal plane layout. The list of ``dead'' (readout noise $> 4\,\mathrm{e}^{-}$ or anomalous Photon Transfer Curve gain) 
 	amplifiers (segments) is {\tt{R30\_S00\_C10}}, {\tt{R01\_S01\_C00}}, {\tt{R03\_S11\_C00}}, {\tt{R04\_SG0\_C11}} 
 and the list of ``high-noise'' (readout noise $> 18\,\mathrm{e}^{-}$) amplifiers is 
@@ -91,8 +93,8 @@ and the list of ``high-noise'' (readout noise $> 18\,\mathrm{e}^{-}$) amplifiers
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/LSSTCam_fp_layout_seth_Oct2024.png}
-  \caption{Focal plane layout including raft and CCD serial numbers (see text). The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}} (\url{https://github.com/lsst-camera-dh/datacat-utilities}). The bad segment list is current as of October 7, 2024.}
+  \includegraphics[width=\textwidth]{figures/LSSTCam_focal_plane_CTN_001_FIG2.pdf}
+	\caption{Focal plane layout including raft and CCD serial numbers (see text). The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}} (\url{https://github.com/lsst-camera-dh/datacat-utilities}). The bad segment list is as in~\ref{fig:focal_plane_1}.}
   \label{fig:focal_plane_2}
 \end{figure}
 
@@ -106,6 +108,7 @@ and the list of ``high-noise'' (readout noise $> 18\,\mathrm{e}^{-}$) amplifiers
 \end{figure}
 
 \appendix
+\input{appendix}
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
 \section{References} \label{sec:bib}
