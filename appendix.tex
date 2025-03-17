@@ -1,6 +1,10 @@
 \appendix
 \section{Raft and Sensor Serial Numbers}
-Table~\ref{tab:mapping} provides the mapping between the rafts, corner rafts, sensors, and their respective serial numbers.  See the caption of the table for details.  The information for the table was extracted from the eTraveler database using the datacat-utilities\footnote{\url{https://github.com/lsst-camera-dh/datacat-utilities}}.
+Table~\ref{tab:mapping} provides the mapping between the rafts, corner rafts, sensors, and their respective serial numbers for LSSTCam.
+See the caption of the table for details.
+The information for the table was extracted from the eTraveler database using the datacat-utilities\footnote{\url{https://github.com/lsst-camera-dh/datacat-utilities}}.
+
+Table~\ref{tab:comcam_mapping} provides the sensor serial numbers for the ComCam raft.
 
 \begin{longtable}{ccc}
 
@@ -284,6 +288,23 @@ Table~\ref{tab:mapping} provides the mapping between the rafts, corner rafts, se
   SW0 & 203 & ITL-CCD-007 \\
   SW1 & 204 & ITL-CCD-025 \\
  & & \\
+
+\begin{longtable}{ccc}
+\multicolumn{3}{c}{\bf ComCam  RTM-031  ITL} \\
+\hline
+  S00 & 000 & ITL-3800C-229 \\
+  S01 & 001 & ITL-3800C-251 \\
+  S02 & 002 & ITL-3800C-215 \\
+  S10 & 003 & ITL-3800C-326 \\
+  S11 & 004 & ITL-3800C-283 \\
+  S12 & 005 & ITL-3800C-243 \\
+  S20 & 006 & ITL-3800C-319 \\
+  S21 & 007 & ITL-3800C-209 \\
+  S22 & 008 & ITL-3800C-206 \\
+
+    \caption{This table lists the raft serial number and the CCD content ComCam.  For each CCD the slot S\#\# and DM index are listed along with the vendor's serial number.}
+    \label{tab:comcam_mapping}
+\end{longtable}
 
     \caption{Each table lists the raft serial number (CRTM-\#\#\# or RTM-\#\#\#, and the CCD content of each raft.  For each CCD the slot S\#\# and DM index are listed along with the vendor's serial number.}
    \label{tab:mapping}
