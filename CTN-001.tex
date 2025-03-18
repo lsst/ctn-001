@@ -10,12 +10,12 @@
 %\input{aglossary.tex}
 %\makeglossaries
 
-\title{LSSTCam Focal Plane Layout}
+\title{LSSTCam and ComCam Focal Plane Layouts}
 
 % This can write metadata into the PDF.
 % Update keywords and author information as necessary.
 \hypersetup{
-    pdftitle={LSSTCam Focal Plane Layout},
+    pdftitle={LSSTCam and ComCam Focal Plane Layouts},
     pdfauthor={First Last},
     pdfkeywords={}
 }
@@ -36,7 +36,7 @@ Andrés A. Plazas Malagón, Seth Digel, Aaron Roodman, Alex Broughton, the LSST 
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-This document includes figures of the LSST Camera’s focal plane layout with ITL and e2v CCDS, highlighting the arrangement of science, wavefront, and guider sensors.
+This document includes figures depicting the layouts of the LSST Camera and ComCam, highlighting the arrangement and identification of science, wavefront, and guider sensors, as well as their individual readout image segments.
 }
 
 % Change history defined here.
@@ -45,6 +45,7 @@ This document includes figures of the LSST Camera’s focal plane layout with IT
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
   \addtohist{1}{2025-02-27}{Create document.}{Andrés A. Plazas Malagón, Seth Digel}
+  \addtohist{1.1}{2025-03-15}{Add ComCam.}{Andrés A. Plazas Malagón, Seth Digel}
 }
 
 \begin{document}
@@ -57,9 +58,9 @@ This document includes figures of the LSST Camera’s focal plane layout with IT
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
 
-\section{Introduction}
-This document provides an overview of the LSSTCam focal plane layout.
-Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2} below illustrate the placement of science, wavefront, and guider sensors, from both ITL and e2v.
+\section{Focal Plane Layouts}
+This document provides an overview of the LSSTCam and ComCam focal plane layouts.
+Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2} below illustrate the placement of science, wavefront, and guider sensors of the LSST Camera, from both ITL and e2v.
 The view is looking down from above the focal plane, i.e., through the LSSTCam lenses.
 
 Figure \ref{fig:focal_plane_2} also includes the serial numbers of the raft tower modules (RTM-\#\#\#), the corner raft tower modules (CRTM-\#\#\#), and the individual CCDs.
@@ -74,6 +75,8 @@ The set of bad segments indicated in the figures is current as of the end of Run
 Figure \ref{fig:focal_plane_3} shows the LSSTCam photographed in the LSST clean room, with the camera rotated 90 deg clockwise with respect to the diagrams in Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2}.
 For more comprehensive technical details on the layout of the CCDs in the focal plane, consult the reference document LCA-13381 \citep{lca13381}. 
 
+Corresponding diagrams and a photo for ComCam are shown in Figures \ref{fig:comcam_focal_plane_1}, \ref{fig:comcam_focal_plane_2}, and \ref{fig:comcam_focal_plane_3}. 
+
 The source code used to generate the figures is available in the GitHub repository associated with this Camera Technical Note.
 
 \clearpage
@@ -81,11 +84,7 @@ The source code used to generate the figures is available in the GitHub reposito
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figures/LSSTCam_focal_plane_CTN_001_FIG1.pdf}
-  \caption{Focal plane layout. The list of ``dead'' (readout noise $> 4\,\mathrm{e}^{-}$ or anomalous Photon Transfer Curve gain) 
-	amplifiers (segments) is {\tt{R30\_S00\_C10}}, {\tt{R01\_S01\_C00}}, {\tt{R03\_S11\_C00}}, {\tt{R04\_SG0\_C11}} 
-and the list of ``high-noise'' (readout noise $> 18\,\mathrm{e}^{-}$) amplifiers is 
-{{\tt{R41\_S21\_C02}}, {\tt{R43\_S20\_C14}}, {\tt{R03\_S01\_C05}}, {\tt{R40\_SG1\_C10}}, 
-	{\tt{R44\_SG0\_C02}}, taken from Tables~8 and 9 of SITCOMTN-148 \citep{utsumi25}. Code source: \url{https://github.com/lsst/ctn-001/code/}}}
+  \caption{LSSTCam focal plane layout. The following amplifiers (segments) are identified as either ``dead" or ``sometimes dead" due to readout noise being less than $4\,\mathrm{e}^{-}$ or an anomalous Photon Transfer Curve gain: {\tt{R30\_S00\_C10}}, {\tt{R01\_S01\_C00}}, {\tt{R03\_S11\_C00}}, {\tt{R04\_SG0\_C11}}. Additionally, the following amplifiers exhibit high readout noise ($> 18\,\mathrm{e}^{-}$): {\tt{R41\_S21\_C02}}, {\tt{R43\_S20\_C14}}, {\tt{R03\_S01\_C05}}, {\tt{R40\_SG1\_C10}}, {\tt{R44\_SG0\_C02}}. These classifications are based on Tables~8 and 9 of SITCOMTN-148 \citep{utsumi25}. Code source: \url{https://github.com/lsst/ctn-001/code/}}
   \label{fig:focal_plane_1}
 \end{figure}
 
@@ -94,7 +93,7 @@ and the list of ``high-noise'' (readout noise $> 18\,\mathrm{e}^{-}$) amplifiers
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figures/LSSTCam_focal_plane_CTN_001_FIG2.pdf}
-	\caption{Focal plane layout including raft and CCD serial numbers (see text). The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}} (\url{https://github.com/lsst-camera-dh/datacat-utilities}). The bad segment list is as in~\ref{fig:focal_plane_1}.}
+	\caption{LSSTCam focal plane layout including raft and CCD serial numbers (see text). The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}} (\url{https://github.com/lsst-camera-dh/datacat-utilities}). The bad segment list is as in~\ref{fig:focal_plane_1}.}
   \label{fig:focal_plane_2}
 \end{figure}
 
@@ -103,9 +102,36 @@ and the list of ``high-noise'' (readout noise $> 18\,\mathrm{e}^{-}$) amplifiers
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figures/LSSTCam_photo.jpg}
-  \caption{LSSTCam photographed in the LSST clean room on January 16, 2024. (Jacqueline Ramseyer Orrell/SLAC National Accelerator Laboratory). The camera is rotated 90 deg counter-clockwise with respect to the diagrams in Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2}. Source: \url{https://rubinobservatory.org/gallery/}}
+  \caption{LSSTCam photographed in the LSST clean room on January 16, 2024. (Jacqueline Ramseyer Orrell/SLAC National Accelerator Laboratory). The camera is rotated 90 deg counter-clockwise with respect to the diagrams in Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2}. Image and caption source: \url{https://rubinobservatory.org/gallery/}}
   \label{fig:focal_plane_3}
 \end{figure}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/ComCam_focal_plane_CTN_001_FIG1.pdf}
+  \caption{ComCam focal plane layout. Code source: \url{https://github.com/lsst/ctn-001/code/}}
+  \label{fig:comcam_focal_plane_1}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/ComCam_focal_plane_CTN_001_FIG2.pdf}
+	\caption{ComCam focal plane layout including raft and CCD serial numbers (see text). The raft and CCD serial numbers come from the \emph{eTraveler} database accessed using {\tt{datacat-utilities}} (\url{https://github.com/lsst-camera-dh/datacat-utilities}).}
+  \label{fig:comcam_focal_plane_2}
+\end{figure}
+
+\clearpage
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/comcam_photo.jpg}
+  \caption{In one of the early images taken with Rubin's 144-megapixel test camera, Rubin staff gathered for a group photo inside the observatory dome, with the Simonyi Survey Telescope pointed at horizon. This "pinhole" image was created using the camera's sensors but without using lenses or mirrors to focus light. Instead of forming a detailed, zoomed-in picture, this technique gives a soft, unfocused image. The visible grid pattern of the camera's sensor array overlays the image. Image and caption source: \url{https://rubinobservatory.org/gallery/}}
+  \label{fig:comcam_focal_plane_3}
+\end{figure}
+
 
 \appendix
 \input{appendix}
