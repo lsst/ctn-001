@@ -1,4 +1,4 @@
-\documentclass[OPS,authoryear,toc]{lsstdoc}
+\documentclass[CTN,authoryear,toc]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
@@ -10,12 +10,12 @@
 %\input{aglossary.tex}
 %\makeglossaries
 
-\title{LSSTCam and ComCam Focal Plane Layouts}
+\title{LSSTCam and LSSTComCam Focal Plane Layouts}
 
 % This can write metadata into the PDF.
 % Update keywords and author information as necessary.
 \hypersetup{
-    pdftitle={LSSTCam and ComCam Focal Plane Layouts},
+    pdftitle={LSSTCam and LSSTComCam Focal Plane Layouts},
     pdfauthor={First Last},
     pdfkeywords={}
 }
@@ -23,9 +23,7 @@
 % Optional subtitle
 % \setDocSubtitle{A subtitle}
 
-\author{%
-Andrés A. Plazas Malagón, Seth Digel, Aaron Roodman, Alex Broughton, the LSST Camera Team. 
-}
+\input{authors}
 
 \setDocRef{CTN-001}
 \setDocUpstreamLocation{\url{https://github.com/lsst/ctn-001}}
@@ -36,7 +34,7 @@ Andrés A. Plazas Malagón, Seth Digel, Aaron Roodman, Alex Broughton, the LSST 
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-This document includes figures depicting the layouts of the LSST Camera and ComCam, highlighting the arrangement and identification of science, wavefront, and guider sensors, as well as their individual readout image segments.
+This document includes figures depicting the layouts of the LSST Camera and LSST Commissioning Camera, highlighting the arrangement and identification of science, wavefront, and guider sensors, as well as their individual readout image segments.
 }
 
 % Change history defined here.
@@ -59,7 +57,7 @@ This document includes figures depicting the layouts of the LSST Camera and ComC
 % You can also use the \input command to include several content files.
 
 \section{Focal Plane Layouts}
-This document provides an overview of the LSSTCam and ComCam focal plane layouts.
+This document provides an overview of the LSSTCam \citep{10.71929/rubin/2571927} and LSSTComCam \citep{10.71929/rubin/2561361} focal plane layouts.
 Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2} below illustrate the placement of science, wavefront, and guider sensors of the LSST Camera, from both ITL and e2v.
 The view is looking down from above the focal plane, i.e., through the LSSTCam lenses.
 
@@ -73,9 +71,9 @@ The set of dead segments and high-noise segments is somewhat dynamic; dead or hi
 The set of bad segments indicated in the figures is current as of the end of Run 7 electro-optical testing.
 
 Figure \ref{fig:focal_plane_3} shows the LSSTCam photographed in the LSST clean room, with the camera rotated 90 deg clockwise with respect to the diagrams in Figures \ref{fig:focal_plane_1} and \ref{fig:focal_plane_2}.
-For more comprehensive technical details on the layout of the CCDs in the focal plane, consult the reference document LCA-13381 \citep{lca13381}. 
+For more comprehensive technical details on the layout of the CCDs in the focal plane, consult the reference document \citeds{LCA-13381}
 
-Corresponding diagrams and a photo for ComCam are shown in Figures \ref{fig:comcam_focal_plane_1}, \ref{fig:comcam_focal_plane_2}, and \ref{fig:comcam_focal_plane_3}. 
+Corresponding diagrams and a photo for ComCam are shown in Figures \ref{fig:comcam_focal_plane_1}, \ref{fig:comcam_focal_plane_2}, and \ref{fig:comcam_focal_plane_3}.
 
 The source code used to generate the figures is available in the GitHub repository associated with this Camera Technical Note.
 
@@ -84,7 +82,7 @@ The source code used to generate the figures is available in the GitHub reposito
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figures/LSSTCam_focal_plane_CTN_001_FIG1.pdf}
-  \caption{LSSTCam focal plane layout. The following amplifiers (segments) are identified as either ``dead" or ``sometimes dead" due to readout noise being less than $4\,\mathrm{e}^{-}$ or an anomalous Photon Transfer Curve gain: {\tt{R30\_S00\_C10}}, {\tt{R01\_S01\_C00}}, {\tt{R03\_S11\_C00}}, {\tt{R04\_SG0\_C11}}. Additionally, the following amplifiers exhibit high readout noise ($> 18\,\mathrm{e}^{-}$): {\tt{R41\_S21\_C02}}, {\tt{R43\_S20\_C14}}, {\tt{R03\_S01\_C05}}, {\tt{R40\_SG1\_C10}}, {\tt{R44\_SG0\_C02}}. These classifications are based on Tables~8 and 9 of SITCOMTN-148 \citep{utsumi25}. Code source: \url{https://github.com/lsst/ctn-001}}
+  \caption{LSSTCam focal plane layout. The following amplifiers (segments) are identified as either ``dead" or ``sometimes dead" due to readout noise being less than $4\,\mathrm{e}^{-}$ or an anomalous Photon Transfer Curve gain: {\tt{R30\_S00\_C10}}, {\tt{R01\_S01\_C00}}, {\tt{R03\_S11\_C00}}, {\tt{R04\_SG0\_C11}}. Additionally, the following amplifiers exhibit high readout noise ($> 18\,\mathrm{e}^{-}$): {\tt{R41\_S21\_C02}}, {\tt{R43\_S20\_C14}}, {\tt{R03\_S01\_C05}}, {\tt{R40\_SG1\_C10}}, {\tt{R44\_SG0\_C02}}. These classifications are based on Tables~8 and 9 of \citeds{SITCOMTN-148}. Code source: \url{https://github.com/lsst/ctn-001}}
   \label{fig:focal_plane_1}
 \end{figure}
 
